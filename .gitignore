@@ -1,0 +1,48 @@
+.venv/
+.venv39/
+venv/
+env/
+
+.env
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+.ipynb_checkpoints
+notebook/.ipynb_checkpoints/
+*_executed.ipynb
+
+.DS_Store
+
+.vscode/
+.idea/
+
+# Security - Secrets and credentials
+*.pem
+*.key
+*.cert
+*.p12
+secrets/
+credentials/
+.secrets
+*.env.local
+*.env.production
+*.env.*.local
+
+# API keys and tokens
+**/api_keys.txt
+**/tokens.txt
+**/*secret*
+**/*password*
+**/*credential*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs that might contain sensitive data
+*.log
+logs/

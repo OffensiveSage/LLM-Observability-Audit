@@ -1,0 +1,8 @@
+pandas
+numpy
+plotly
+arize-phoenix
+llama-index
+llama-index-llms-groq
+python-dotenv
+openinference-instrumentation-llama-index
