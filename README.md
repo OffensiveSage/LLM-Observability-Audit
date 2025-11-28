@@ -140,4 +140,19 @@ cat outputs/experiment_results.csv
 
 ---
 
+## 🏁 Conclusion: The Trust Paradox
+
+This audit reveals a critical security insight: **AI models are confident, but not always correct.**
+
+Our "Integrity Gap" analysis shows that while the model's reasoning often *sounds* plausible, the actual output can deviate significantly from reality (up to $98K in our test). For a financial application, this variance is a high-risk vulnerability.
+
+**Key Takeaways for Security Professionals:**
+1.  **Trust but Verify**: Never deploy an LLM without an observability layer (like Arize Phoenix) to audit its actual behavior.
+2.  **The Black Box Risk**: Without tracing, you are blind to "silent failures" where the model hallucinates convincingly.
+3.  **Continuous Auditing**: Security is not a one-time check. Automated pipelines like this one are essential to detect model drift and new failure modes over time.
+
+**Final Verdict**: The model is a powerful tool, but it requires a "human-in-the-loop" or strict guardrails for high-stakes decision-making.
+
+---
+
 **Audit Status:** ✅ **COMPLETE** - All telemetry captured and integrity verified.
