@@ -2,7 +2,7 @@
 
 ## ✅ All Task Requirements Completed
 
-### 1. Data Access (40 homes via CMU login)
+### 1. Data Access
 - **File**: `data/RA_Application_Task.csv`
 - **Records**: 38 homes with bedrooms, bathrooms, lot size, year built, sale price
 
