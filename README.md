@@ -29,13 +29,15 @@
 
 ---
 
-## ⚠️ Security Note
+## ⚠️ Setup Required: API Key Configuration
 
-**IMPORTANT**: The `.env` file contains your API key and should **NEVER** be shared or committed to version control.
+**This repository does NOT include API keys.** You must create your own `.env` file locally:
 
-- ✅ `.gitignore` is configured to exclude `.env`
-- ✅ Use `.env.example` as a template (safe to share)
-- ✅ Keep your actual `.env` file private
+1. Copy the template: `cp .env.example .env`
+2. Add your Groq API key to `.env`
+3. Get your key from: https://console.groq.com/keys
+
+**Note**: The `.env` file is gitignored and will never be committed to this repository.
 
 ---
 
