@@ -90,8 +90,9 @@ cat outputs/experiment_results.csv
 | `outputs/performance_curve.html` | Interactive visualization |
 | `outputs/experiment_results.csv` | All results with AI estimates |
 | `notebook/experiment_v1.ipynb` | Jupyter notebook version |
-| `.env` | API key configuration |
+| `.env.example` | API key template (create `.env` from this) |
 | `requirements.txt` | Python dependencies |
+| `SECURITY.md` | Security best practices |
 
 ---
 
