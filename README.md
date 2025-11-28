@@ -1,5 +1,7 @@
 # 🕵️‍♂️ Cracking the Black Box: LLM Observability & Integrity Audit
 
+> **Maintainer & Security Contact:** Eshwar Desetty (eshwar.desetty03@gmail.com)
+
 ## ❓ The Security Question
 **Can we trust an AI model with critical financial decisions?**
 
