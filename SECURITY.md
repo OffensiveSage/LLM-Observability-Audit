@@ -1,44 +1,39 @@
 # Security Policy
 
-## Reporting Security Vulnerabilities
+## 🛡️ Reporting Vulnerabilities
 
-If you discover a security vulnerability in this project, please report it by emailing the maintainer directly rather than opening a public issue.
+**Do not open public GitHub issues for security vulnerabilities.**
 
-## Security Best Practices
+If you discover a security issue, please report it privately by emailing the maintainer. We adhere to the principle of **Coordinated Vulnerability Disclosure**.
 
-### API Key Management
+## 🔐 Project Security Standards
 
-This project uses API keys for external services (e.g., GROQ API). **Never commit API keys to the repository.**
+### 1. Secrets Management
+*   **Strict Isolation**: API keys (e.g., Groq, OpenAI) must **never** be committed to version control.
+*   **Environment Variables**: All secrets are loaded exclusively from a local `.env` file.
+*   **Git Protection**: The `.gitignore` file is configured to strictly exclude `.env`, `*.key`, and `secrets/`.
+*   **Key Rotation**: In the event of an accidental commit, all exposed keys must be revoked and rotated immediately.
 
-1. **Use `.env` files**: Store all API keys in a `.env` file (already gitignored)
-2. **Use `.env.example`**: Provide a template without actual keys
-3. **Rotate keys**: If a key is accidentally exposed, rotate it immediately
+### 2. Data Privacy & Anonymization
+*   **No PII**: This repository must not contain Personally Identifiable Information (PII).
+*   **Synthetic Data**: Use only anonymized or synthetic datasets for testing (e.g., `data/RA_Application_Task.csv`).
+*   **Output Sanitization**: Review all generated artifacts (logs, CSVs, HTML) for sensitive data before committing.
 
-### Dependencies
+### 3. Dependency Security
+*   **Vulnerability Scanning**: We utilize GitHub Actions to scan dependencies for known CVEs.
+*   **Minimal Footprint**: Only essential, well-maintained packages are included in `requirements.txt`.
 
-- Regularly update dependencies to patch security vulnerabilities
-- Run `pip list --outdated` to check for updates
-- Consider using tools like `safety` or `pip-audit` for vulnerability scanning
+## ✅ Contributor Security Checklist
 
-### Data Privacy
+Before submitting a Pull Request, verify the following:
 
-- Do not commit any real user data or personally identifiable information (PII)
-- Use synthetic or anonymized data for testing and examples
-- Review all output files before committing to ensure no sensitive data is included
+- [ ] **Secrets Check**: No API keys or credentials are hardcoded.
+- [ ] **Git Status**: The `.env` file is untracked.
+- [ ] **Data Review**: No real user data is present in outputs.
+- [ ] **Sanitization**: Error messages and logs do not leak internal state or secrets.
 
-## Security Checklist for Contributors
+## 🛡️ Secure Development Lifecycle (SDLC)
 
-Before pushing to GitHub:
-
-- [ ] No API keys or secrets in code
-- [ ] `.env` file is gitignored
-- [ ] No sensitive data in output files
-- [ ] Dependencies are up to date
-- [ ] Code has been reviewed for security issues
-
-## Secure Development Guidelines
-
-1. **Input Validation**: Always validate and sanitize user inputs
-2. **Error Handling**: Don't expose sensitive information in error messages
-3. **Logging**: Be careful not to log sensitive data (API keys, user data, etc.)
-4. **Dependencies**: Only use well-maintained, trusted packages
+1.  **Input Validation**: Sanitize all external inputs before processing.
+2.  **Fail Safe**: Ensure the application fails securely without exposing stack traces to end-users.
+3.  **Audit Trails**: Maintain observability (via OpenTelemetry) without logging sensitive payloads.
