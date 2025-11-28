@@ -14,7 +14,12 @@ We are not just predicting housing prices; we are **auditing the "brain" of Llam
 This project demonstrates a complete **AI Observability & Integrity Audit** pipeline. We treat the LLM as a suspect and the traces as our evidence.
 
 ### 🔍 What We Uncovered
-By instrumenting the model with **Arize Phoenix**, we gained X-Ray vision into its decision-making process:
+By instrumenting the model with **Arize Phoenix**, we gained X-Ray vision into its decision-making process.
+
+**The Integrity Gap:**
+![AI vs Market Price Audit](AI_vs_Actual_Market_prices.png)
+
+*Figure 1: The Red Line (AI) attempts to track the Blue Line (Reality). The gaps represent model hallucinations and drift.*
 
 ---
 
