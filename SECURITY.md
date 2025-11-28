@@ -4,7 +4,11 @@
 
 **Do not open public GitHub issues for security vulnerabilities.**
 
-If you discover a security issue, please report it privately by emailing the maintainer. We adhere to the principle of **Coordinated Vulnerability Disclosure**.
+Security was a primary focus during the development of this project. However, if you discover a vulnerability or a potential risk, please report it directly to me at:
+
+📧 **eshwar.desetty03@gmail.com**
+
+I will address any valid security concerns promptly.
 
 ## 🔐 Project Security Standards
 
